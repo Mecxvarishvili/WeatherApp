@@ -6,7 +6,7 @@ export default async function HomePage () {
   console.log(data)
   return (
     <div>
-      Home Page
+      {data}
     </div>
   );
 };
