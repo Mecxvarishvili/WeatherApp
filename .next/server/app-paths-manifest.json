@@ -1,4 +1,3 @@
 {
-  "/page": "app/page.js",
   "/weather/[cityId]/page": "app/weather/[cityId]/page.js"
 }
