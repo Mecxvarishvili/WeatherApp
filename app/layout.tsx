@@ -1,4 +1,5 @@
-import Header from "./_components/Header"
+import './main.css';
+import Header from "./_components/Header";
 
 export const metadata = {
   title: 'Weather App',

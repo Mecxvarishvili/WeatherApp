@@ -4,6 +4,6 @@ export async function getGeoCoding (city: string) {
 }
 
 export async function getWeather (lat: number, lon: number) {
-    const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&timezone=auto`)
+    const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&timezone=auto&current=temperature_2m,relative_humidity_2m,apparent_temperature,rain,showers,snowfall,cloud_cover,wind_speed_10m,uv_index`)
     return res.json()
 }
