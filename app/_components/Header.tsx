@@ -1,6 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
+import ToggleTheme from './ToggleTheme'
 
 export default function Header() {
   const [ input, setInput ] = useState('')
@@ -23,6 +24,7 @@ export default function Header() {
         <input onChange={handleChange} id="search" type="text" />
         <button type='submit'>submit</button>
       </form>
+      <ToggleTheme />
     </header>
   )
 }

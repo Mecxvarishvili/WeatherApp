@@ -1,5 +1,7 @@
 import './main.css';
 import Header from "./_components/Header";
+import { ThemeProvider } from 'next-theme';
+import Provider from './_components/ThemeProvider';
 
 export const metadata = {
   title: 'Weather App',
@@ -13,9 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
+      <body suppressHydrationWarning>
+        <Provider>
+          <Header />
+          {children}
+        </Provider>
       </body>
     </html>
   )
