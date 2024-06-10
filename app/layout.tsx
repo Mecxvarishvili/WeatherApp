@@ -1,6 +1,5 @@
 import './main.css';
 import Header from "./_components/Header";
-import { ThemeProvider } from 'next-theme';
 import Provider from './_components/ThemeProvider';
 
 export const metadata = {

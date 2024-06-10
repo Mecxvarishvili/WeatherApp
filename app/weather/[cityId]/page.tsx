@@ -1,4 +1,5 @@
 import AirConditionCard from '@/app/_components/AirConditionCard'
+import SevenDayForecast from '@/app/_components/SevenDayForecast'
 import { GeoCodings, LocationData, WeatherData } from '@/app/_types/types'
 import { getGeoCoding, getWeather } from '@/app/api/api'
 import React from 'react'
@@ -36,7 +37,9 @@ export default async function CityWeatherPage({params}: Props) {
             </div>
         </div>
 
-        <div className="col-span-3 lg:col-span-1">7 days forecast</div>
+        <div className="col-span-3 lg:col-span-1">
+            <SevenDayForecast data={weather.daily} />
+        </div>
     </div>
   )
 }

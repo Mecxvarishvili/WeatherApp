@@ -1,3 +1,8 @@
+export type DailyData = {
+    "time": Date[],
+    "weather_code": number[],
+    "precipitation_probability_mean": number[]
+}
 export type WeatherData = {
     "latitude": number,
     "longitude": number,
@@ -36,8 +41,11 @@ export type WeatherData = {
         "time": Date[]
         "temperature_2m": number[]
         
-    }
+    },
+    "daily": DailyData
 }
+
+
 
 export type LocationData = {
     "id": number,
