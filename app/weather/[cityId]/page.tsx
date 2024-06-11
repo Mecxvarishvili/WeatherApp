@@ -22,7 +22,7 @@ export default async function CityWeatherPage({params}: Props) {
     const weather: WeatherData = await getWeather(location.latitude, location.longitude)
 
   return (
-    <div className='grid grid-cols-3 gap-4 container mx-auto' >
+    <div className='container mx-auto px-10 grid grid-cols-3 gap-4 ' >
         <div className='col-span-3 lg:col-span-2 grid gap-4' >
             <div >
                 <div>{location.name}, {location.country}</div>
