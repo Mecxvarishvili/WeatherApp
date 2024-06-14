@@ -8,7 +8,7 @@ type Props = {
     data: DailyData
 }
 
-export default function SevenDayForecastDay({index, data }: Props) {
+export default function DailyForecastDay({index, data }: Props) {
 
   return (
     <div className='grid grid-cols-3'>

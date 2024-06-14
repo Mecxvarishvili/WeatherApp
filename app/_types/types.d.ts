@@ -3,6 +3,13 @@ export type DailyData = {
     "weather_code": number[],
     "precipitation_probability_mean": number[]
 }
+
+export type HourlyData = {
+    "weather_code": number[],
+    "temperature_2m": number[],
+    "time": Date[]
+}
+
 export type WeatherData = {
     "latitude": number,
     "longitude": number,
@@ -37,11 +44,7 @@ export type WeatherData = {
         "wind_speed_10m": number,
         "uv_index": number
     },
-    "hourly": {
-        "time": Date[]
-        "temperature_2m": number[]
-        
-    },
+    "hourly": HourlyData,
     "daily": DailyData
 }
 

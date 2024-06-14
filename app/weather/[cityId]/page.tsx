@@ -1,5 +1,6 @@
 import AirConditionCard from '@/app/_components/AirConditionCard'
-import SevenDayForecast from '@/app/_components/SevenDayForecast'
+import DailyForecast from '@/app/_components/DailyForecast'
+import HourlyForecast from '@/app/_components/HourlyForecast'
 import { GeoCodings, LocationData, WeatherData } from '@/app/_types/types'
 import { getGeoCoding, getWeather } from '@/app/api/api'
 import React from 'react'
@@ -24,21 +25,24 @@ export default async function CityWeatherPage({params}: Props) {
   return (
     <div className='container mx-auto px-10 grid grid-cols-3 gap-4 ' >
         <div className='col-span-3 lg:col-span-2 grid gap-4' >
-            <div >
-                <div>{location.name}, {location.country}</div>
-                <div>{weather.current.temperature_2m} {weather.current_units.temperature_2m}</div>
+            <div className="flex justify-between">
+                <div>
+                    <div className="text-5xl">{location.name}, {location.country}</div>
+                    <div className="text-6xl mt-12">{weather.current.temperature_2m} {weather.current_units.temperature_2m}</div>
+                </div>
 
+                <div>
+                    image
+                </div>
             </div>
 
             <AirConditionCard data={weather} />
 
-            <div>
-                todays forecast
-            </div>
+            <HourlyForecast data={weather.hourly} />
         </div>
 
         <div className="col-span-3 lg:col-span-1">
-            <SevenDayForecast data={weather.daily} />
+            <DailyForecast data={weather.daily} />
         </div>
     </div>
   )
