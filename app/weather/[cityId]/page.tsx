@@ -1,4 +1,4 @@
-import AirConditionCard from '@/app/_components/AirConditionCard'
+import AirCondition from '@/app/_components/AirCondition'
 import DailyForecast from '@/app/_components/DailyForecast'
 import HourlyForecast from '@/app/_components/HourlyForecast'
 import { GeoCodings, LocationData, WeatherData } from '@/app/_types/types'
@@ -36,7 +36,7 @@ export default async function CityWeatherPage({params}: Props) {
                 </div>
             </div>
 
-            <AirConditionCard data={weather} />
+            <AirCondition data={weather} />
 
             <HourlyForecast data={weather.hourly} />
         </div>
