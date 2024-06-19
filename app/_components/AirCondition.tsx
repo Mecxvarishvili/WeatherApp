@@ -11,7 +11,7 @@ export default function AirCondition({
 }) {
     
   return (
-    <div>
+    <div className="rounded-3xl px-8 py-5 bg-containerBg dark:bg-darkMode-containerBg border border-containerBorder dark:border-darkMode-containerBorder rounded-lg shadow-md" >
         <div className='flex justify-between'>
             <div className="text-xl capitalize">Air Condition</div>
             <button>See More</button>
