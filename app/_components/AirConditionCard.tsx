@@ -9,7 +9,10 @@ type Props = {
 export default function AirConditionCard({ children, value, text }: Props) {
   return (
     <div>
-        <div className="text-2xl flex items-center font-light" > {children} {text} </div>
+        <div className="text-2xl flex items-center font-light" >
+           {children} 
+           <span className="ms-3" >{text}</span>
+          </div>
         <div className="text-3xl font-semibold mt-3">{value}</div>
     </div>
   )

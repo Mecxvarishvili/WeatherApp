@@ -21,8 +21,8 @@ export default function Header() {
 
   return (
     <header className='container mx-auto my-4 px-10 flex justify-between' >
-      <form onSubmit={handleSubmit} className="rounded-xl flex px-2 py-1">
-        <input onChange={handleChange} id="search" type="text" className="outline-none" />
+      <form onSubmit={handleSubmit} className="rounded-3xl flex bg-containerBg dark:bg-darkMode-containerBg border border-containerBorder dark:border-darkMode-containerBorder shadow-md px-4 py-2">
+        <input onChange={handleChange} id="search" type="text" className="outline-none bg-containerBf  dark:bg-darkMode-containerBg" />
         <button type='submit' className="cursor-pointer text-2xl"><IoSearch /></button>
       </form>
       <ToggleTheme />

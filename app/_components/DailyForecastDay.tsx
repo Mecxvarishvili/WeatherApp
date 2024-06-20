@@ -14,7 +14,7 @@ export default function DailyForecastDay({index, data }: Props) {
     <div className='grid grid-cols-3'>
         <div>{ index ? <WeekDay time={data.time[index]} /> : <div>Today</div> }</div>
         <div><WeatherIcon code={data.weather_code[index]} /></div>
-        <div>{data.precipitation_probability_mean[index]} %</div>
+        <div>{data.precipitation_probability_mean[index]}%</div>
     </div>
   )
 }
