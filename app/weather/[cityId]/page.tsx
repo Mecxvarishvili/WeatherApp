@@ -1,6 +1,6 @@
 import AirCondition from '@/app/_components/AirCondition'
 import DailyForecast from '@/app/_components/DailyForecast'
-import HourlyForecast from '@/app/_components/HourlyForecast'
+import TodayForecast from '@/app/_components/TodayForecast'
 import { GeoCodings, LocationData, WeatherData } from '@/app/_types/types'
 import { getGeoCoding, getWeather } from '@/app/api/api'
 import React from 'react'
@@ -38,7 +38,7 @@ export default async function CityWeatherPage({params}: Props) {
 
             <AirCondition data={weather} />
 
-            <HourlyForecast data={weather.hourly} />
+            <TodayForecast data={weather.hourly} />
         </div>
 
         <div className="col-span-3 lg:col-span-1">
