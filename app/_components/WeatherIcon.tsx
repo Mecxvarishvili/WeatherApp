@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'next/image';
 
-export default function WeatherIcon({ code }: {
-    code: number
+export default function WeatherIcon({ code, size }: {
+    code: number,
+    size: number,
 }) {
     const getImageFromCode = (code: number) => {
         switch (code) {
@@ -54,8 +55,6 @@ export default function WeatherIcon({ code }: {
     const {alt, icon} = getImageFromCode(code)
 
     return (
-      <div>
-        <Image src={icon} alt={alt} width={100} height={100}/>
-      </div>
+        <Image src={icon} alt={alt} width={size} height={size}/>
   )
 }

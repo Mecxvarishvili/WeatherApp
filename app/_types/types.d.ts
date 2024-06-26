@@ -42,7 +42,8 @@ export type WeatherData = {
         "snowfall": number,
         "cloud_cover": number,
         "wind_speed_10m": number,
-        "uv_index": number
+        "uv_index": number,
+        'weather_code': number
     },
     "hourly": HourlyData,
     "daily": DailyData

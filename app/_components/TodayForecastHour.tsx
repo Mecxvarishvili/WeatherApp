@@ -19,7 +19,7 @@ export default function HourlyForecastHour({index, data}: Props) {
   return (
     <div>
       <div>{getTime(new Date(data.time[index]))}</div>
-      <div><WeatherIcon code={data.weather_code[index]} /></div>
+      <div><WeatherIcon code={data.weather_code[index]} size={100}/></div>
       <div>{data.temperature_2m[index]}°C</div>
     </div>
   )
