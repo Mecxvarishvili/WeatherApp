@@ -5,6 +5,7 @@ import WeatherIcon from '@/app/_components/WeatherIcon'
 import { GeoCodings, LocationData, WeatherData } from '@/app/_types/types'
 import { getGeoCoding, getWeather } from '@/app/api/api'
 import React from 'react'
+import WeatherDetailsModal from "@/app/_components/WeatherDetailsModal"
 
 
 export async function generateMetadata ({params}: Props) {
@@ -40,7 +41,7 @@ export default async function CityWeatherPage({params}: Props) {
                     <div className="text-6xl mt-14">{weather.current.temperature_2m} {weather.current_units.temperature_2m}</div>
                 </div>
 
-                <WeatherIcon code={weather.current.weather_code} size={200}/>
+                <WeatherIcon code={weather.current.weather_code} size={150}/>
             </div>
 
             <AirCondition data={weather} />
@@ -51,6 +52,7 @@ export default async function CityWeatherPage({params}: Props) {
         <div className="col-span-3 xl:col-span-1">
             <DailyForecast data={weather.daily} />
         </div>
+        <WeatherDetailsModal data={weather} />
     </div>
   )
 }
